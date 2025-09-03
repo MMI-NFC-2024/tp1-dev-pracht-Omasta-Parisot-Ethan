@@ -1,13 +1,20 @@
 ---
---- 
+const pathname = Astro.url.pathname;
+---
 
 <header class="navbar">
   <div class="logo">My Data Viz</div>
   <nav>
     <ul>
-      <li><a href="/penguins" class="active">Penguins</a></li>
-      <li><a href="/diamonds">Diamonds</a></li>
-      <li><a href="/weather">Weather</a></li>
+      <li>
+        <a href="/" class={pathname === "/" ? "active" : ""}>Penguins</a>
+      </li>
+      <li>
+        <a href="/diamonds" class={pathname === "/diamonds" ? "active" : ""}>Diamonds</a>
+      </li>
+      <li>
+        <a href="/cars" class={pathname === "/cars" ? "active" : ""}>Cars</a>
+      </li>
     </ul>
   </nav>
 </header>

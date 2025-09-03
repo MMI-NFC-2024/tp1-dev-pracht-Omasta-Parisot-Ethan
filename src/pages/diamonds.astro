@@ -1,26 +1,25 @@
 ---
 import PlotFigure from '../components/PlotFigure.astro';
-import penguins from '../assets/penguins.json';
+import diamonds from '../assets/diamonds.json';
 import * as Plot from "@observablehq/plot";
 import Header from '../components/Header.astro';
 ---
 
 <Header />
 <div class="container">
-	<h1>Graphique penguins</h1>
+	<h1>Graphique diamonds</h1>
 	<PlotFigure
 		options={{
 			marks: [
-			Plot.dot(penguins, {
-				x: "flipper_length_mm",
-				y: "body_mass_g",
-				stroke: "species"
+			Plot.dot(diamonds, {
+				x: "carat",
+				y: "price",
+				stroke: "color"
 			})
 			]
 		}}
 		/>
 </div>
-
 <style>
   body {
     justify-content: center;
