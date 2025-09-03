@@ -2,8 +2,10 @@
 import PlotFigure from '../components/PlotFigure.astro';
 import penguins from '../assets/penguins.json';
 import * as Plot from "@observablehq/plot";
+import Header from '../components/Header.astro';
 ---
 
+<Header />
 <div class="container">
 	<h1>Graphique penguins</h1>
 	<PlotFigure
@@ -20,7 +22,6 @@ import * as Plot from "@observablehq/plot";
 </div>
 <style>
   body {
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -52,6 +53,7 @@ import * as Plot from "@observablehq/plot";
     width: 90%;
     text-align: center;
     animation: fadeIn 0.8s ease-in-out;
+	margin: 2rem auto;
   }
 
   @keyframes fadeIn {
